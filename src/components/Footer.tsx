@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom'
+
 const columns = [
   {
     title: "What's new",
@@ -39,9 +41,9 @@ export default function Footer() {
             <ul className="space-y-1.5">
               {col.links.map((link) => (
                 <li key={link.to}>
-                  <a href={`#${link.to}`} className="text-sm text-gray-500 hover:text-gray-800 hover:underline">
+                  <Link to={link.to} className="text-sm text-gray-500 hover:text-gray-800 hover:underline">
                     {link.label}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
