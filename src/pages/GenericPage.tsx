@@ -5,7 +5,7 @@ import Footer from '../components/Footer'
 function slugToTitle(slug: string): string {
   return slug
     .split('-')
-    .map((word, i) => i === 0 ? word.charAt(0).toUpperCase() + word.slice(1) : word)
+    .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
     .join(' ')
 }
 
